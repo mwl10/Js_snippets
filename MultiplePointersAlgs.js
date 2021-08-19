@@ -1,6 +1,6 @@
 // Count Unique Values
-// accepts a SORTED array of digits, and returns the count of unique values in the array 
-
+	// accepts a SORTED array of digits, and returns the count of unique values in the array 
+	// time complexity O(n), space complexity O(1)
 
 function countUniqueValues(arr){
   // two pointers: i,j 
