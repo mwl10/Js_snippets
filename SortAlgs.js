@@ -59,8 +59,9 @@ console.log(selectionSort([1,3,2]))
 console.log(selectionSort([1,6,5,3]))
 console.log(selectionSort([1,2,3,4]))
 console.log(selectionSort([5,4,3,2,1]))
-
+console.log(selectionSort([5,4,3,100, 102]))
 // Insertion Sort
+
 
 
 
