@@ -48,6 +48,7 @@ console.assert(averagePair([], 2.5) === false);
 // Is Subsequence 
 	// takes in two strings, checks whether chars in the first string form a subsequence of the characters
 	// in the second string, without their order changing 
+	// time O(n), space O(1)
 
 
 function isSubsequence(sub, str) {
