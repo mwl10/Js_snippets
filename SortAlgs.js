@@ -60,11 +60,47 @@ console.log(selectionSort([1,6,5,3]))
 console.log(selectionSort([1,2,3,4]))
 console.log(selectionSort([5,4,3,2,1]))
 console.log(selectionSort([5,4,3,100, 102]))
+
+
 // Insertion Sort
+// start at index of 1, place it correctly in the subarray before it 
+function insertionSort(arr) {
+	for(var i = 1; i < arr.length; i++) {
+		currValue = arr[i]
+		// go down from j, starting at one before i
+		for (var j = i - 1; j >= 0; j--) {
+			if (arr[j] <= currValue) {
+				break;
+			}
+			else {
+				// set the value at j+1 to be j
+				arr[j+1] = arr[j]
+			}
+		}
+		arr[j+1] = currValue
+	}
+	return arr
+}
 
+function insertionSort(arr) {
+	for(var i = 1; i < arr.length; i++) {
+		currValue = arr[i]
+		// go down from j, starting at one before i
+		// nifty way to break from the loop 
+		for (var j = i - 1; j >= 0 && arr[j] > currValue; j--) {
+			arr[j+1] = arr[j]
+		}
+		arr[j+1] = currValue
+	}
+	return arr
+}
 
-
-
+console.log('insertionSort-----------------------')
+console.log(insertionSort([1,3,2]))
+console.log(insertionSort([1,6,5,3]))
+console.log(insertionSort([1,2,3,4]))
+console.log(insertionSort([5,4,3,2,1]))
+console.log(insertionSort([5,4,3,100,102]))
 
 
 

@@ -67,15 +67,19 @@ console.log(flatten([[1],[2],[3]])) // [1,2,3]
 console.log(flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]])) // [1,2,3]
 
 
+// takes as input an arr of strings
+// capitalizes the first letter of each string and returns the array 
+function capitalizeFirst(arr) {
+    if (arr.length === 0) return []
+    else {
+        let upperCaseOfStr= arr[0][0].toUpperCase()
+        let restOfStr = arr[0].slice(1,arr[0].length)
+        let restOfLst = arr.slice(1, arr.length)
+        return [upperCaseOfStr.concat(restOfStr)].concat(capitalizeFirst(restOfLst))
+    }
+}
 
-
-
-
-
-
-
-
-
+console.log(capitalizeFirst(['ab', 'cd']))
 
 
 
